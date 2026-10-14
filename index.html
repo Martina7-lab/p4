@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p3 - Arenal Sound</title>
+    <style>
+        :root{
+            --grocfondo-color: #fbec94;
+            --rosa-color: #fd8bc9;
+            --lila-color: #d695e0;
+            --blau-color: #96cef3;
+            --grocfort-color: #fce901;
+            --taronja-color: #eeb241;
+            --neutral-b-color: black;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            background-color: white;
+        }
+        body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0;
+            border: 3px solid var(--neutral-b-color);
+            background-color: var(--rosa-color);
+            color: var(--neutral-b-color);
+            font-family: Impact, "Arial Narrow" , sans-serif;
+        }
+        header {
+            background-color: var(--rosa-color);
+            padding: 12px 3%;
+        }
+        header hgroup {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            align-items: center;
+            gap: 12px;
+        }
+        header h1 {
+            grid-column: 2;
+            grid-row: 1;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2.6rem;
+            background-color: var(--grocfort-color);
+            color: var(--neutral-b-color);
+            border: 3px solid var(--neutral-b-color);
+            border-radius: 45px;
+        }
+        header h2 {
+            margin: 0;
+            padding: 5px;
+            text-align: center;
+            font-size: 1.6rem;
+            background-color: var(--blau-color);
+            color: var(--neutral-b-color);
+            border: 3px solid var(--neutral-b-color);
+        }
+        header h2:first-of-type {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        header h2:nth-of-type(2) {
+            grid-column: 3;
+            grid-row: 1;
+        }
+        header h3 {
+            margin: 5px 0;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+        header h3:first-of-type {
+            grid-column: 1 / 2;
+            grid-row: 2;
+        }
+        header h3:last-of-type {
+            grid-column: 3 / 4;
+            grid-row: 2;
+            text-align: right;
+        }
+        .zona-lila {
+            background-color: var(--lila-color);   
+        }
+        .zona-amarilla {
+            background-color: var(--grocfondo-color);
+        }
+        section {
+            padding: 4px 3%;
+            border-bottom: 2px solid var(--neutral-b-color);
+        }
+        section h4 {
+            margin: 5px 0 8px;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            list-style: none;
+            padding: 0;
+            margin: 5px 0;
+        }
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 4px 6px;
+            border: 2px solid var(--neutral-b-color);
+            font-size: 1.1rem;
+            line-height: 1.1;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .artista-naranja {
+            background-color: var(--taronja-color);
+        }
+        .artista-amarillo {
+            background-color: var(--grocfort-color);
+        }
+        .artista-azul {
+            background-color: var(--blau-color);
+        }
+        .artista-destacado {
+            background-color: var(--grocfort-color);
+            border: 2px solid var(--neutral-b-color);
+            font-size: 1.9rem;
+            padding: 5px 8px;
+            transform: rotate(-3deg);
+        }
+        .fecha-azul {
+            display: inline-block;
+            background-color: var(--blau-color);
+            color: var(--neutral-b-color);
+            border: 2px solid var(--neutral-b-color);
+            padding: 5px 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .fecha-rosa {
+            display: inline-block;
+            background-color: var(--rosa-color);
+            color: var(--neutral-b-color);
+            border: 2px solid var(--neutral-b-color);
+            padding: 5px 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .entrada-amarilla {
+            display: inline-block;
+            background-color: var(--grocfondo-color);
+            color: var(--neutral-b-color);
+            border: 2px solid var(--neutral-b-color);
+            padding: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        footer {
+            background-color: var(--blau-color);
+            border-top: 3px solid var(--neutral-b-color);
+            padding: 12px 3%;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            line-height: 1.1;
+            color: var(--neutral-b-color);
+        }
+        footer a {
+            color: var(--neutral-b-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Arenal Sound</h1>
+            <h2>2023</h2>
+            <h2>2023</h2>
+            <h3>1 al 6 de ago.2023</h3> 
+            <h3>playa de Burriana, Castellón</h3>
+        </hgroup>
+    </header>
+    <main>
+        <section class="zona-lila">
+            <h4><time class="fecha-azul" datetime="2023-08-01">Martes 1.Ago</time> <span class="entrada-amarilla">Entrada independiente</span></h4> 
+            <ul>
+                <li class="artista-destacado">Jhayco</li>
+                <li class="artista-amarillo">Henry Mendez</li>
+                <li class="artista-amarillo">Danny Romero</li>
+                <li class="artista-amarillo">Vicco</li>
+                <li class="artista-amarillo">Mafalda Cardenal</li>
+                <li class="artista-amarillo">Alex Martini</li>
+            </ul>
+        </section>
+        <section class="zona-lila">
+            <h4><time class="fecha-azul" datetime="2023-08-02">Miércoles 2.Ago</time> <span class="entrada-amarilla">Entrada independiente</span></h4>
+            <ul>
+                 <li class="artista-destacado">Saiko</li>
+                 <li class="artista-amarillo">Hens</li>
+                 <li class="artista-amarillo">Walls</li>
+                 <li class="artista-amarillo">Love Yi</li>
+                 <li class="artista-amarillo">Selecta</li>
+                 <li class="artista-amarillo">Kabasaki</li>
+            </ul>
+        </section>
+        <section class="zona-amarilla">
+            <h4><time class="fecha-rosa" datetime="2023-08-03">Jueves 3.Ago</time></h4>
+            <ul>
+                <li class="artista-destacado">Mora</li>
+                <li class="artista-naranja">Nicky Romero</li>
+                <li class="artista-naranja">Morad</li>
+                <li class="artista-naranja">FernandoCosta</li>
+                <li class="artista-naranja">Recycled J</li>
+                <li class="artista-naranja">Emilia</li>
+                <li class="artista-naranja">Villano Antillano</li>
+                <li class="artista-naranja">JC Reyes</li>
+                <li class="artista-naranja">Camin</li>
+                <li class="artista-naranja">María Escarmiento</li>
+                <li class="artista-naranja">Nena Daconte</li>
+                <li class="artista-naranja">Mälmo 040</li>
+                <li class="artista-naranja">Ters</li>
+                <li class="artista-naranja">Jorge Cremades</li>
+                <li class="artista-naranja">Groove amigos</li>
+                <li class="artista-naranja">Ballesteros</li>
+                <li class="artista-naranja">Blondex</li>
+                <li class="artista-naranja">Keey C</li>
+            </ul>
+        </section>
+        <section class="zona-amarilla">
+            <h4><time class="fecha-rosa" datetime="2023-08-04">Viernes 4.Ago</time></h4>  
+            <ul>
+                <li class="artista-destacado">Anuel AA</li>
+                <li class="artista-azul">Young Miko</li>
+                <li class="artista-azul">Danny Ocean</li>
+                <li class="artista-azul">Danna Paola</li>
+                <li class="artista-azul">Dani Fernández</li>
+                <li class="artista-azul">Marlon</li>
+                <li class="artista-azul">Lérica</li>
+                <li class="artista-azul">Pignoise</li>
+                <li class="artista-azul">Alvama Ice</li>
+                <li class="artista-azul">José de las Heras</li>
+                <li class="artista-azul">Miranda</li>
+                <li class="artista-azul">Fabbio</li>
+                <li class="artista-azul">Rorro</li>
+                <li class="artista-azul">Rouss</li>
+                <li class="artista-azul">Hektor Mass</li>
+                <li class="artista-azul">Quike Av</li>
+                <li class="artista-azul">Pedraza</li>
+                <li class="artista-azul">Xune</li>
+            </ul> 
+        </section>
+        <section class="zona-amarilla">
+            <h4><time class="fecha-rosa" datetime="2023-08-05">Sábado 5.Ago </time></h4>    
+            <ul>
+                <li class="artista-destacado">Nicky Jam</li>
+                <li class="artista-naranja">Taburete</li>
+                <li class="artista-naranja">Maldita Nerea</li>
+                <li class="artista-naranja">Ptazeta</li>
+                <li class="artista-naranja">Bresh</li>
+                <li class="artista-naranja">Pole.</li>
+                <li class="artista-naranja">Álvaro de Luna</li>
+                <li class="artista-naranja">Belén Aguilera</li>
+                <li class="artista-naranja">Dillom</li>
+                <li class="artista-naranja">Gloosito</li>
+                <li class="artista-naranja">31FAM</li>
+                <li class="artista-naranja">Dudi</li>
+                <li class="artista-naranja">Michenlo</li>
+                <li class="artista-naranja">Yeico x Toni</li>
+                <li class="artista-naranja">Ardiya</li>
+                <li class="artista-naranja">Facundo Majdalani</li>
+                <li class="artista-naranja">Carmen de la Fuente</li>
+                <li class="artista-naranja">Alonso Mae</li>
+            </ul>
+        </section>
+        <section class="zona-amarilla">
+            <h4><time class="fecha-rosa" datetime="2023-08-06">Domingo 6.Ago </time></h4>
+            <ul>
+                <li class="artista-destacado">Quevedo</li>
+                <li class="artista-azul">Ana Mena</li>
+                <li class="artista-azul">Lali</li>
+                <li class="artista-azul">Nervo</li>
+                <li class="artista-azul">Delaossa</li>
+                <li class="artista-azul">Juancho Marqués</li>
+                <li class="artista-azul">Kaydy Cain</li>
+                <li class="artista-azul">YSY A</li>
+                <li class="artista-azul">Nikone</li>
+                <li class="artista-azul">Veintiuno</li>
+                <li class="artista-azul">Fran Perea</li>
+                <li class="artista-azul">La Fúmiga</li>
+                <li class="artista-azul">Samurai</li>
+                <li class="artista-azul">Barce</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Últimas entradas de día al precio actual. + info:<a href="https://arenalsound.com"> arenalsound.com</a></p>
+    <p><a href="https://fanmusicfest.com/sites/default/files/347583584_18369374830023407_1519614424025125324_n.jpg">Ver cartel original</a></p>
+    </footer>
+</body>
+</html>
